@@ -1,16 +1,37 @@
-# music_player
+# Music Player (Flutter)
 
-A new Flutter project.
+The start of a music player app in Flutter. So far it has the account screens and navigation; playback is not built yet.
 
-## Getting Started
+## What works
 
-This project is a starting point for a Flutter application.
+- **Login screen** with form validation: email format check and a password rule (at least 8 characters with upper case, lower case, a digit and a special character). Errors show as you type.
+- **Sign-up screen** with name, email and password, using the same validation.
+- **Animated navigation** between login and sign-up, using a slide transition.
+- **Home screen** shell with an app bar and bottom navigation.
 
-A few resources to get you started if this is your first Flutter project:
+Login does not talk to a server. A valid form goes straight to the home screen.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Not done yet
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Audio playback
+- Playlists and track lists on the home screen
+- Real authentication
+
+## Run it
+
+Requires the [Flutter SDK](https://docs.flutter.dev/get-started/install) (Dart 3.3 or later).
+
+```
+flutter pub get
+flutter run
+```
+
+## Structure
+
+| File | What it does |
+|---|---|
+| `lib/main.dart` | App entry point and named routes |
+| `lib/login_page.dart` | Login form and validation |
+| `lib/signup_page.dart` | Sign-up form and validation |
+| `lib/home_page.dart` | Home screen shell |
+| `lib/slide_transition_x.dart` | Custom slide transition widget (not wired in yet) |
